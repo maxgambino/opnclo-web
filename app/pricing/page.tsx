@@ -17,13 +17,13 @@ export default function Pricing() {
                 Pricing
               </Link>
               <a href={`${APP_URL}/login`} className="text-gray-600 hover:text-gray-900 transition-colors">
-                Sign in
+                Log in
               </a>
               <a
                 href={`${APP_URL}/signup`}
                 className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
               >
-                Start Free Trial
+                Start for free
               </a>
             </div>
           </div>
