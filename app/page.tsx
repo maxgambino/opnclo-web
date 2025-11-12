@@ -12,7 +12,7 @@ export default function Home() {
             <div className="flex items-center space-x-8">
               <Link href="/" className="flex items-center">
                 <img 
-                  src={`/api/proxy-image?url=${encodeURIComponent('https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/Opnclo-logo.png')}`}
+                  src={`/api/proxy-image?url=${encodeURIComponent('https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/logo simple opnclo.png')}`}
                   alt="Opnclo Logo" 
                   className="h-8 w-auto"
                 />
