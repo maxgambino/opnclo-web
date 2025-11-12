@@ -8,19 +8,41 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-inter), "Inter", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #e2e8f0;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), "Inter", sans-serif;
+}
+
+.gradient-background {
+  background: linear-gradient(120deg, #e0f2fe, #f0e6ff);
+}
+
+.dark .gradient-background {
+  background: linear-gradient(120deg, #1e293b, #312e81);
+}
+
+.gradient-glow-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 400px;
+  background: radial-gradient(circle, rgba(199, 210, 254, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+
+.dark .gradient-glow-top {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
 }
