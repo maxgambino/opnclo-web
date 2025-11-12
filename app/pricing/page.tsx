@@ -13,7 +13,7 @@ export default function Pricing() {
               <img 
                 src={`/api/proxy-image?url=${encodeURIComponent('https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/Opnclo-logo v1.png')}`}
                 alt="Opnclo Logo" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
             <div className="hidden md:flex items-center space-x-8">
