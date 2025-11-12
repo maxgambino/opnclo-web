@@ -100,12 +100,9 @@ export default function Home() {
                     alt="Mobile app showing checklist notification on smartphone" 
                     src="https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/mobile-checklist.png"
                     className="w-full h-auto rounded-xl block"
-                    style={{ maxWidth: '256px' }}
+                    style={{ maxWidth: '256px', display: 'block' }}
                     loading="lazy"
-                    onError={(e) => {
-                      // Fallback vers l'URL locale si GitHub Raw échoue
-                      e.currentTarget.src = '/mobile-checklist.png';
-                    }}
+                    crossOrigin="anonymous"
                   />
                 </div>
               </div>
@@ -242,17 +239,10 @@ export default function Home() {
                     alt="Team collaboration interface showing communication and team management" 
                     src="https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/mobile-checklist.png"
                     className="w-full h-auto rounded-xl block"
+                    style={{ display: 'block' }}
                     loading="lazy"
-                    onError={(e) => {
-                      // Fallback vers placeholder si l'image échoue
-                      e.currentTarget.style.display = 'none';
-                      const fallback = e.currentTarget.nextElementSibling as HTMLElement;
-                      if (fallback) fallback.classList.remove('hidden');
-                    }}
+                    crossOrigin="anonymous"
                   />
-                  <div className="rounded-xl shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-8 aspect-video flex items-center justify-center hidden">
-                    <span className="material-icons text-6xl text-blue-600 dark:text-blue-400">groups</span>
-                  </div>
                 </div>
               </div>
               <div>
