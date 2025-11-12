@@ -113,10 +113,14 @@ export default function Home() {
                 <div className="w-64 rounded-xl shadow-2xl overflow-hidden">
                   <img 
                     alt="Mobile app showing checklist notification on smartphone" 
-                    src="/mobile-checklist.png"
+                    src="https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/mobile-checklist.png"
                     className="w-full h-auto rounded-xl block"
                     style={{ maxWidth: '256px' }}
                     loading="lazy"
+                    onError={(e) => {
+                      // Fallback vers l'URL locale si GitHub Raw échoue
+                      e.currentTarget.src = '/mobile-checklist.png';
+                    }}
                   />
                 </div>
               </div>
