@@ -11,7 +11,7 @@ export default function Pricing() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center">
               <img 
-                src={`/api/proxy-image?url=${encodeURIComponent('https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/logo.png')}`}
+                src={`/api/proxy-image?url=${encodeURIComponent('https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/Opnclo-logo.png')}`}
                 alt="Opnclo Logo" 
                 className="h-8 w-auto"
               />
