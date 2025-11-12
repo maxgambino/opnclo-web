@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app-opnclo.vercel.app"
 
@@ -88,21 +87,7 @@ export default function Home() {
             </div>
             <div className="relative">
               {/* Dashboard mockup */}
-              <div className="relative z-10 w-full rounded-xl shadow-2xl overflow-hidden">
-                <Image 
-                  alt="Dashboard showing organizational management interface" 
-                  src="/dashboard-mockup.png"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto"
-                  priority
-                  onError={(e) => {
-                    // Fallback si l'image n'existe pas encore
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-              </div>
-              <div className="rounded-xl shadow-2xl relative z-10 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-8 aspect-video flex items-center justify-center hidden">
+              <div className="relative z-10 w-full rounded-xl shadow-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-8 aspect-video flex items-center justify-center">
                 <div className="text-center">
                   <span className="material-icons text-6xl text-blue-600 dark:text-blue-400 mb-4">dashboard</span>
                   <p className="text-slate-600 dark:text-slate-400">Dashboard Preview</p>
@@ -166,19 +151,7 @@ export default function Home() {
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
-                <div className="rounded-xl shadow-xl overflow-hidden">
-                  <Image 
-                    alt="Organizational management interface showing efficiency tools" 
-                    src="/efficiency-feature.png"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                </div>
-                <div className="rounded-xl shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-8 aspect-video flex items-center justify-center hidden">
+                <div className="rounded-xl shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-8 aspect-video flex items-center justify-center">
                   <span className="material-icons text-6xl text-blue-600 dark:text-blue-400">settings</span>
                 </div>
               </div>
@@ -251,19 +224,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="order-1 md:order-2">
-                <div className="rounded-xl shadow-xl overflow-hidden">
-                  <Image 
-                    alt="Analytics dashboard showing organizational accuracy metrics" 
-                    src="/accuracy-feature.png"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                </div>
-                <div className="rounded-xl shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-8 aspect-video flex items-center justify-center hidden">
+                <div className="rounded-xl shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-8 aspect-video flex items-center justify-center">
                   <span className="material-icons text-6xl text-blue-600 dark:text-blue-400">analytics</span>
                 </div>
               </div>
@@ -277,19 +238,21 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
                 <div className="rounded-xl shadow-xl overflow-hidden">
-                  <Image 
+                  <img 
                     alt="Team collaboration interface showing communication and team management" 
-                    src="/collaboration-feature.png"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto"
+                    src="https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/mobile-checklist.png"
+                    className="w-full h-auto rounded-xl block"
+                    loading="lazy"
                     onError={(e) => {
+                      // Fallback vers placeholder si l'image échoue
                       e.currentTarget.style.display = 'none';
+                      const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.classList.remove('hidden');
                     }}
                   />
-                </div>
-                <div className="rounded-xl shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-8 aspect-video flex items-center justify-center hidden">
-                  <span className="material-icons text-6xl text-blue-600 dark:text-blue-400">groups</span>
+                  <div className="rounded-xl shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-8 aspect-video flex items-center justify-center hidden">
+                    <span className="material-icons text-6xl text-blue-600 dark:text-blue-400">groups</span>
+                  </div>
                 </div>
               </div>
               <div>
