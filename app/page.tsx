@@ -10,8 +10,12 @@ export default function Home() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
-              <Link href="/" className="text-2xl font-bold text-slate-900 dark:text-white">
-                OPNCLO
+              <Link href="/" className="flex items-center">
+                <img 
+                  src={`/api/proxy-image?url=${encodeURIComponent('https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/logo.png')}`}
+                  alt="Opnclo Logo" 
+                  className="h-8 w-auto"
+                />
               </Link>
               <nav className="hidden md:flex items-center space-x-6">
                 <a href="#features" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
