@@ -14,7 +14,7 @@ export default function Home() {
                 <img 
                   src={`/api/proxy-image?url=${encodeURIComponent('https://raw.githubusercontent.com/maxgambino/opnclo-web/master/public/Opnclo-logo v1.png')}`}
                   alt="Opnclo Logo" 
-                  className="h-8 w-auto"
+                  className="h-12 w-auto"
                 />
               </Link>
               <nav className="hidden md:flex items-center space-x-6">
