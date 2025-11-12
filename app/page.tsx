@@ -110,23 +110,23 @@ export default function Home() {
               </div>
               <div className="absolute -right-10 -bottom-10 z-20">
                 {/* Mobile app mockup with checklist notification */}
-                <div className="w-64 rounded-xl shadow-2xl overflow-hidden">
-                  <Image 
+                <div className="w-64 rounded-xl shadow-2xl overflow-hidden bg-white dark:bg-slate-800">
+                  <img 
                     alt="Mobile app showing checklist notification on smartphone" 
                     src="/mobile-checklist.png"
-                    width={256}
-                    height={456}
-                    className="w-full h-auto"
+                    className="w-full h-auto rounded-xl"
                     onError={(e) => {
                       // Fallback si l'image n'existe pas encore
                       e.currentTarget.style.display = 'none';
+                      const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.classList.remove('hidden');
                     }}
                   />
-                </div>
-                <div className="rounded-xl shadow-2xl w-64 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-6 aspect-[9/16] flex items-center justify-center hidden">
-                  <div className="text-center">
-                    <span className="material-icons text-4xl text-blue-600 dark:text-blue-400 mb-2">phone_android</span>
-                    <p className="text-xs text-slate-600 dark:text-slate-400">Mobile App</p>
+                  <div className="rounded-xl shadow-2xl w-full bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 p-6 aspect-[9/16] flex items-center justify-center hidden">
+                    <div className="text-center">
+                      <span className="material-icons text-4xl text-blue-600 dark:text-blue-400 mb-2">phone_android</span>
+                      <p className="text-xs text-slate-600 dark:text-slate-400">Mobile App</p>
+                    </div>
                   </div>
                 </div>
               </div>
